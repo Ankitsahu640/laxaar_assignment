@@ -34,7 +34,7 @@ function NotePage() {
 const checkInputUP = (note) => {
   let ii=0;
   Note.map((ele)=>{
-    if(ele.title.toLowerCase()===note.title.toLowerCase() && ele.id!==note.id){
+    if(ele.title.trim().toLowerCase()===note.title.trim().toLowerCase() && ele.id!==note.id){
       toast.error("Note title already exists.", {
         position: "top-center",
         autoClose: 1500});

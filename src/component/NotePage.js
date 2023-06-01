@@ -58,12 +58,15 @@ const checkInputUP = (note) => {
 
     const UpdateNoteChanges=(e)=>{
         setNoteVal({...noteVal,[e.target.name]: e.target.value});
-        if (e.target.name === "title" && e.target.value.trim().length < 10) {
-          document.getElementById("validateDiscription02").setAttribute("required", true);
-        } else {
-          document.getElementById("validateDiscription02").removeAttribute("required");
-        }
     }
+    
+    useEffect(()=>{
+    if (noteVal.title.trim().length < 10) {
+      document.getElementById("validateDiscription").setAttribute("required", true);
+    } else {
+      document.getElementById("validateDiscription").removeAttribute("required");
+    }
+  },[noteVal])
 
     const UpdateNote = (curNote)=>{
       setNoteVal({id:curNote.id ,title:curNote.title ,discription:curNote.discription})

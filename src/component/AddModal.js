@@ -1,4 +1,4 @@
-import React,{ useRef,useState} from 'react';
+import React,{useEffect,useRef,useState} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -11,12 +11,15 @@ function AddModal(props) {
 
   const AddNoteChanges=(e)=>{
     setNoteVal({...noteVal,[e.target.name]: e.target.value,id: new Date().getTime().toString()});
-    if (e.target.name === "title" && e.target.value.trim().length < 10) {
+  }
+  
+  useEffect(()=>{
+    if (noteVal.title.trim().length < 10) {
       document.getElementById("validateDiscription").setAttribute("required", true);
     } else {
       document.getElementById("validateDiscription").removeAttribute("required");
     }
-  }
+  },[noteVal])
 
   const checkInput = (note) => {
     let ii=0;

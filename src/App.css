@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Lora&family=Paprika&family=Patua+One&family=Sen&family=Vollkorn:wght@500&display=swap');
+
+
+body{
+  background-color: #ffffff;
+  height:100vh;
+}
+
+.txtgrad{
+  background: -webkit-linear-gradient(#f8b84b, #ab3eef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.yourNotes{
+  font-family: 'Vollkorn', serif;
+  color: #000000;
+  margin: 2rem auto -0.5rem;
+  width: 80vw;
+  max-width: 70rem;
+} 
+
+
+.searchBar{
+  display: flex;
+  justify-content: center;
+}
+#search{
+  width:45rem;
+  height:2rem;
+  padding: 1rem;
+  margin-right: 3rem;
+  border: 2px solid rgb(162, 129, 179);
+  border-radius: 10rem;
+}
+.filter-btn{
+  margin-right:1rem;
+}
+.filter-form{
+  padding:1rem ;
+}
+.filter-footer{
+  display: flex;
+  justify-content: space-between;
+}
+.filter-footer button{
+  font-size: 0.83rem;
+  padding: 0.2rem 0.5rem;
+}
+
+
+
+.containerN{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 3rem;
+}
+.noteContainer{
+  margin: auto;
+  max-width: 69rem;
+}
+.grid-container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1.3rem;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.card-body{
+  height:13rem;
+  width:20rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background-color: #ff0101;
+  background-image: linear-gradient(315deg, #9f01fb 0%, #016afe 74%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 30px -20px, rgba(0, 0, 0, 0.3) 0px 10px 20px -30px, rgba(10, 37, 64, 0.35) 0px -2px 5px 0px inset;
+}
+.card-body hr{
+  margin: 0px;
+}
+.card-title{
+  font-family: 'Patua One', cursive;
+}
+.card-text{
+  font-family: 'Lora','Sen', sans-serif;
+  height:10rem;
+  margin:2px;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+.add-note{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+  cursor:pointer;
+  font-size: 1.125rem;
+}
+.icon-plus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  height: 5rem;
+  width:5rem;
+  border: 3px dashed #ffffff;
+  border-radius: 100px;
+  padding-bottom: 12.6px;
+}
+.btn-info{
+  color: #ffffff;
+  background-color: #ff0000;
+  background-image: linear-gradient(315deg, #da01fb 0%, #0190fe 74%);
+}
+.card-body:hover{
+  box-shadow: 2px 3px 10px rgb(59, 59, 59);
+}
+.cardDate{
+  display:flex;
+  padding: 0.2rem 1.5rem 0.5rem ;
+  flex-direction: row-reverse;
+}
+.delIcon{
+  cursor:pointer;
+}
+.editIcon{
+  cursor: pointer;
+  margin-left:1.5rem;
+}
+.open-note{
+  height: 80vh;
+  white-space: pre-wrap;
+  padding: 2rem 3rem;
+}
+.open-note h1{
+  margin:1rem 0rem;
+  background: -webkit-linear-gradient(#02589e, #7e00cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.open-note h4{
+  color:#4b05bd;
+}
+.navcolor{
+  background-color: #ffffff;
+}
+
+
+@media screen and (max-width:1200px){
+  *{
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width:1020px){
+  *{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width:991px){
+  *{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width:888px){
+  *{
+     font-size: 14px;
+   }
+   .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 47rem;
+   }
+   #search{
+    max-width: 25rem;
+    width:70vw;
+   }
+   .card-body{
+    margin: 0rem auto 1rem
+   } 
+}
+
+@media screen and (max-width:666px){
+  *{
+    font-size: 12px;
+  }
+  .grid-container{
+    max-width: 42rem;
+   }
+}
+
+@media screen and (max-width:570px){
+  *{
+    font-size: 10px;
+  }
+  .grid-container{
+    max-width: 42rem;
+   }
+}
+
+@media screen and (max-width:480px){
+  *{
+    font-size: 9px;
+  }
+  .grid-container{
+    max-width: 42rem;
+   }
+   .aboutFont{
+    font-size: 1.6rem;
+   }
+   .Dashboard_conatiner{
+    width:100%;
+    padding: 3rem;
+    background-size: 100% 100%; 
+   }
+}
+
+@media screen and (max-width:420px){
+  *{
+    font-size: 10px;
+  }
+  .grid-container{
+    max-width: 42rem;
+    grid-template-columns: repeat(1, 1fr);
+   }
+   .card-body{
+    width: 25rem;
+   }
+   #search{
+    max-width: 13rem;
+    width:70vw;
+    margin-right: 1rem;
+   }
+}
+

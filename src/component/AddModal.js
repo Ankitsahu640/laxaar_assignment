@@ -21,7 +21,7 @@ function AddModal(props) {
   const checkInput = (note) => {
     let ii=0;
     Note.map((ele)=>{
-      if(ele.title.toLowerCase()===note.title.toLowerCase()){
+      if(ele.title.trim().toLowerCase()===note.title.trim().toLowerCase()){
         toast.error("Note title already exists.", {
           position: "top-center",
           autoClose: 1500});
